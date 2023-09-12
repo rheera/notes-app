@@ -8,14 +8,14 @@ Part of Scrimba's learn React course. An app that stores multiple notes that are
 - [Features to Add](#features-to-add)
 - [Quick Start](#quick-start)
 
-### Tools
+## Tools
 
 Made with React and Gatsby.
 
-### Features to add
+## Features to add
 
-- [] Sync notes with localStorage
-- [] Add note summary titles
+- [ ] Sync notes with localStorage
+- [ ] Add note summary titles
 - [ ] Move modified notes to the top of the list
 - [ ] Delete notes
 
