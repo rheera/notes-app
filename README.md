@@ -1,49 +1,35 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal Starter
-</h1>
+# Markdown Notes App
 
-## 🚀 Quick start
+Part of Scrimba's learn React course. An app that stores multiple notes that are written in a Markdown Editor with the ability to preview them.
 
-1.  **Create a Gatsby site.**
+## Table of Contents
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+- [Tools](#tools)
+- [Features to Add](#features-to-add)
+- [Quick Start](#quick-start)
+
+### Tools
+
+Made with React and Gatsby.
+
+### Features to add
+
+- [] Sync notes with localStorage
+- [] Add note summary titles
+- [ ] Move modified notes to the top of the list
+- [ ] Delete notes
+
+## Quick start
+
+1.  **Start developing.**
+
+    Navigate into the site’s directory and start it up.
 
     ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
-
-2.  **Start developing.**
-
-    Navigate into your new site’s directory and start it up.
-
-    ```shell
-    cd my-gatsby-site/
+    npm install
     npm run develop
     ```
 
-3.  **Open the code and start customizing!**
+2.  **Open the code and start customizing!**
 
     Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Netlify)
-
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
-
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
