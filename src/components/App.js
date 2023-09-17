@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import Sidebar from "./Sidebar";
 import Editor from "./Editor";
 import Split from "react-split";
-import { nanoid } from "nanoid";
+import { onSnapshot, addDoc, doc, deleteDoc } from "firebase/firestore";
+import { db, notesCollection } from "../firebase";
 import "../css/App.css";
 
 export default function App() {
@@ -15,20 +16,26 @@ export default function App() {
     notes.find((note) => note.id === currentNoteId) || notes[0];
 
   useEffect(() => {
-    localStorage.setItem("notes", JSON.stringify(notes));
-  }, [notes]);
+    const unsubscribe = onSnapshot(notesCollection, function (snapshot) {
+      console.log("Changed");
+      const notesArr = snapshot.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      setNotes(notesArr);
+    });
+    return unsubscribe;
+  }, []);
 
-  function createNewNote() {
+  async function createNewNote() {
     const newNote = {
-      id: nanoid(),
       body: "# Type your markdown note's title here",
     };
-    setNotes((prevNotes) => [newNote, ...prevNotes]);
-    setCurrentNoteId(newNote.id);
+    const newNoteRef = await addDoc(notesCollection, newNote);
+    setCurrentNoteId(newNoteRef.id);
   }
 
   function updateNote(text) {
-    // Have the most recently updated note go to the top
     setNotes((oldNotes) => {
       const newArray = [];
       for (let i = 0; i < oldNotes.length; i++) {
@@ -41,11 +48,25 @@ export default function App() {
       }
       return newArray;
     });
+
+    // old code
+    // setNotes((oldNotes) => {
+    //   const newArray = [...oldNotes];
+    //   for (let i = 0; i < newArray.length; i++) {
+    //     const oldNote = newArray[i];
+    //     if (oldNote.id === currentNoteId) {
+    //       newArray.unshift({ ...oldNote, body: text });
+    //       newArray.splice(i + 1, 1);
+    //     } else {
+    //     }
+    //   }
+    //   return newArray;
+    // });
   }
 
-  function deleteNote(event, noteId) {
-    event.stopPropagation();
-    setNotes((oldNotes) => oldNotes.filter((note) => note.id !== noteId));
+  async function deleteNote(noteId) {
+    const docRef = doc(db, "notes", noteId);
+    await deleteDoc(docRef);
   }
 
   return (
