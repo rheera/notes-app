@@ -18,7 +18,7 @@ Made with React and Gatsby.
 - [x] Add note summary titles
 - [x] Move modified notes to the top of the list
 - [x] Delete notes
-- [ ] Move from local storage to a database
+- [x] Move from local storage to a database
 
 ## Quick start
 
