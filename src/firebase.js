@@ -5,14 +5,13 @@ import { getFirestore, collection } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCUX887579Vzzj1EOWb4eTnhYcJ-fjwyoY",
-  authDomain: "react-notes-7415c.firebaseapp.com",
-  projectId: "react-notes-7415c",
-  storageBucket: "react-notes-7415c.appspot.com",
-  messagingSenderId: "190476865318",
-  appId: "1:190476865318:web:dc14bfecdd73449b2f7be7",
+  apiKey: process.env.GATSBY_API_KEY,
+  authDomain: process.env.GATSBY_AUTH_DOMAIN,
+  projectId: process.env.GATSBY_PROJECT_ID,
+  storageBucket: process.env.GATSBY_STORAGE_BUCKET,
+  messagingSenderId: process.env.GATSBY_MESSAGING_SENDER_ID,
+  appId: process.env.GATSBY_APP_ID,
 };
 
 // Initialize Firebase

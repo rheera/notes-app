@@ -18,7 +18,6 @@ export default function App() {
 
   useEffect(() => {
     const unsubscribe = onSnapshot(notesCollection, function (snapshot) {
-      console.log("Changed");
       const notesArr = snapshot.docs.map((doc) => ({
         ...doc.data(),
         id: doc.id,
