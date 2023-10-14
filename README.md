@@ -10,7 +10,7 @@ Part of Scrimba's learn React course. An app that stores multiple notes that are
 
 ## Tools
 
-Made with React and Gatsby. Hosted on Netlify.
+Made with React, Gatsby, Firebase. Hosted on Netlify.
 
 ## Features to add
 
