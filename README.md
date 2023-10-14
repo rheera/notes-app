@@ -1,6 +1,6 @@
 # Markdown Notes App
 
-Part of Scrimba's learn React course. An app that stores multiple notes that are written in a Markdown Editor with the ability to preview them.
+Part of Scrimba's learn React course. An app that stores multiple notes that are written in a Markdown Editor with the ability to preview them. Live Link: https://note-to-markdown.netlify.app/
 
 ## Table of Contents
 
@@ -10,7 +10,7 @@ Part of Scrimba's learn React course. An app that stores multiple notes that are
 
 ## Tools
 
-Made with React and Gatsby.
+Made with React and Gatsby. Hosted on Netlify.
 
 ## Features to add
 
